@@ -15,10 +15,10 @@
     - name: Start SQL service
       service: name=mysqld state=restarted
     - name: create a database
-      mysql_db: name=test1 state:present
+      mysql_db: name=test1 state=present
     - name: create a user
       mysql_user: name=demo password=demo priv=demo.*:ALL host='%' state=present
     - name: restart mysql
-      service: name=mysql state:restarted
+      service: name=mysql state=restarted
 
       
