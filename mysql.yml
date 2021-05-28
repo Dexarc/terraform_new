@@ -2,6 +2,10 @@
 - hosts: all
   become: true
   tasks:
+    - name: New directory
+      file:
+        path: /usr/mysql/
+        state: directory
     - name: Install wget
       yum: name=wget state=installed
     - name: Install Python
